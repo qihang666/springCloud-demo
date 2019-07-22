@@ -1,0 +1,23 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: feignServer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+      prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+
+
+
+

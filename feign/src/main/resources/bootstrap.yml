@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: feign
+  profiles:
+    active: prot8400
+  cloud:
+    config:
+      uri: http://localhost:8000
+      fail-fast: true
+
+
+
+
+

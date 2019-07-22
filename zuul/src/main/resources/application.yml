@@ -1,0 +1,16 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    provide: /p/** #代理消费者 换名字路径
+    feignServer: /f/**
+
+
+
